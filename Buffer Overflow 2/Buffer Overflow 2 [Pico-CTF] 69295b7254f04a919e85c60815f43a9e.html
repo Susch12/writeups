@@ -680,11 +680,56 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="69295b72-54f0-4a91-9e85-c60815f43a9e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💻</span></div><h1 class="page-title">Buffer Overflow 2 [Pico-CTF]</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Class</th><td><span class="selected-value select-value-color-green">pwn</span></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr></tbody></table></header><div class="page-body"><p id="12a96b36-cd09-80da-836a-d1e0a8616cf0" class="">Comenzamos descargando el código fuente y binario para hacer pruebas locales.</p><p id="12a96b36-cd09-807c-9805-ebc308750f7b" class="">
-</p><p id="12a96b36-cd09-80ca-9bb4-fa894d0cfa00" class="">Después revisamos las seguridades que tiene el binario con el comando checksec </p><p id="12a96b36-cd09-8035-af75-e620a0e6c46a" class="">
-</p><figure id="12a96b36-cd09-80c8-816e-f8805d46c847" class="image"><a href="image.png"><img style="width:644.984375px" src="image.png"/></a></figure><p id="12a96b36-cd09-80ba-9663-f9f7d06a0e36" class="">
-</p><ul id="12a96b36-cd09-8003-8768-c2ce2c060797" class="bulleted-list"><li style="list-style-type:disc">RELRO (Relocation Read-Only) es una protección que previene la modificación de ciertas áreas de memoria en el binario. </li></ul><ul id="12a96b36-cd09-8043-a67b-ffc432d106c0" class="bulleted-list"><li style="list-style-type:disc">Los stack canaries son valores aleatorios que se colocan en la pila para detectar sobreescrituras de buffer. </li></ul><ul id="12a96b36-cd09-8090-8f1c-d22a98184c86" class="bulleted-list"><li style="list-style-type:disc">NX (No-eXecute) es una protección que marca ciertas áreas de memoria (como la pila) como no ejecutables, lo que previene que se ejecute código en áreas que solo deberían contener datos.</li></ul><ul id="12a96b36-cd09-80db-8c45-ca9fcbc6ad1d" class="bulleted-list"><li style="list-style-type:disc">PIE (Position Independent Executable) es una técnica que permite que un binario se cargue en diferentes direcciones de memoria en cada ejecución, lo que dificulta predecir las direcciones para la explotación. </li></ul><ul id="12a96b36-cd09-80bd-b9d3-d53305ae9854" class="bulleted-list"><li style="list-style-type:disc">SHSTK (Shadow Stack) es una protección de hardware que previene la manipulación de la pila de retorno, protegiendo contra ataques que intentan modificar las direcciones de retorno. </li></ul><ul id="12a96b36-cd09-8076-9fab-c54eb7bcb46a" class="bulleted-list"><li style="list-style-type:disc">IBT (Indirect Branch Tracking) es una protección que evita que se puedan explotar saltos indirectos (como los que se usan en ataques ROP). </li></ul><ul id="12a96b36-cd09-8021-a90b-dfaa9967cde8" class="bulleted-list"><li style="list-style-type:disc">Stripped Indica si el binario ha sido &quot;stripped&quot;, es decir, si se han eliminado los símbolos de depuración y la tabla de símbolos.</li></ul><p id="12a96b36-cd09-802d-aa96-e1de99be4974" class="">En este caso existe solo una protección parcial de RELRO, No tenemos canaries, existe la protección NX, no contamos con PIE, contamos con SHSTK, contamos con IBT y no se han eliminado la tabla de símbolos. </p><p id="12a96b36-cd09-8041-ac74-e372faa1d876" class="">
-</p><p id="12a96b36-cd09-807d-b43f-c2f32dc219b8" class="">Usualmente procederíamos con hacerle reversing al binario, para analizar su funcionamiento, pero como se nos brinda el código fuente podemos ver como funciona el binario. </p><p id="12a96b36-cd09-8024-8b42-fc65ff1822f2" class="">
-</p><figure id="12a96b36-cd09-809c-a546-c3a4c430c128" class="image"><a href="image%201.png"><img style="width:707.984375px" src="image%201.png"/></a></figure><p id="12a96b36-cd09-8012-8607-da5af2b4d2da" class="">
-</p><p id="12a96b36-cd09-80d2-8d9f-f320b905879e" class="">A primera vista nos damos cuenta que se trata de un reto ret2win </p><p id="12a96b36-cd09-809d-aa39-effacecc389d" class="">En el que se piden dos argumentos: 0xCAFEF00D y 0xF00DF00D</p><p id="12a96b36-cd09-80d5-9da3-d9a28b613e60" class="">Tenemos la variable global de BUFSIZE con un tamaño de 100</p><p id="12a96b36-cd09-806b-a69c-ed5476ee40a7" class="">
-</p><p id="12a96b36-cd09-803a-b262-f6bf743a79c7" class="">Mientras que el offset es de 112</p><p id="12a96b36-cd09-8012-9460-db9fc7170209" class="">Si lo queremos hacer de manera más practica necesitamos hacer lo siguiente</p><figure id="12a96b36-cd09-8043-ab35-d68b183f4dc3" class="image"><a href="image%202.png"><img style="width:707.984375px" src="image%202.png"/></a></figure><p id="12a96b36-cd09-804b-8be0-d5d507bb52de" class=""><br/><br/><br/></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+
+</style></head><body>
+<article class="page sans">
+  <header>
+    <div class="page-header-icon undefined"><span class="icon">💻</span></div>
+    <h1 class="page-title">Buffer Overflow 2 [Pico-CTF]</h1>
+    <p class="page-description"></p>
+    <table class="properties">
+      <tbody>
+        <tr class="property-row property-row-select">
+          <th>Class</th>
+          <td><span class="selected-value select-value-color-green">pwn</span></td>
+        </tr>
+        <tr class="property-row property-row-status">
+          <th>Status</th>
+          <td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </header>
+
+  <div class="page-body">
+    <p>We begin by downloading the source code and binary to run local tests.</p>
+
+    <p>Then we check the binary protections using the <code>checksec</code> command:</p>
+    <figure class="image"><a href="image.png"><img style="width:645px" src="image.png"/></a></figure>
+
+    <ul>
+      <li><b>RELRO</b> (Relocation Read-Only) prevents modifications to certain memory areas in the binary.</li>
+      <li><b>Stack canaries</b> are random values placed on the stack to detect buffer overflows.</li>
+      <li><b>NX</b> (No-eXecute) marks stack areas as non-executable to prevent code execution in data regions.</li>
+      <li><b>PIE</b> (Position Independent Executable) allows the binary to load at random memory locations each run.</li>
+      <li><b>SHSTK</b> (Shadow Stack) protects return addresses from tampering.</li>
+      <li><b>IBT</b> (Indirect Branch Tracking) mitigates exploitation via indirect jumps (e.g., ROP).</li>
+      <li><b>Stripped</b> indicates whether debugging symbols have been removed.</li>
+    </ul>
+
+    <p>In this case, we have partial RELRO, no canaries, NX enabled, no PIE, SHSTK enabled, IBT enabled, and the binary is not stripped.</p>
+
+    <p>We would usually reverse the binary, but since we’re given the source code, we can directly analyze its logic.</p>
+    <figure class="image"><a href="image%201.png"><img style="width:708px" src="image%201.png"/></a></figure>
+
+    <p>At first glance, we see this is a typical <b>ret2win</b> challenge.</p>
+    <p>The goal is to pass two arguments: <code>0xCAFEF00D</code> and <code>0xF00DF00D</code>.</p>
+    <p>There's a global variable <code>BUFSIZE</code> set to 100.</p>
+    <p>The offset is 112.</p>
+
+    <p>To solve it practically, we need to craft the following payload:</p>
+    <figure class="image"><a href="image%202.png"><img style="width:708px" src="image%202.png"/></a></figure>
+  </div>
+</article>
+</body>
+</html>
